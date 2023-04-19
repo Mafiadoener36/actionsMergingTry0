@@ -43,7 +43,7 @@ jobs:
         run: rm -rf ./revanced-patches/.git && rm -rf ./revanced-patches/.github && rm -rf ./revanced-patches/.idea
         
       - name: compress
-        run: cd revanced-patches && 7z a ../rp.7z *
+        run: 7z a ./rp.7z ./revanced-patches/
         
       - name: move to root
         run: rsync -a ./revanced-patches/ ./ && rm -rf revanced-patches
