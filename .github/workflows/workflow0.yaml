@@ -39,6 +39,9 @@ jobs:
       - name: merge & delete temp
         run: rsync -a ./revanced-patches2/ ./revanced-patches/ && rm -rf revanced-patches2
         
+      - name: delete foreign dotfiles
+        run: rm -rf ./revanced-patches/.git && rm -rf ./revanced-patches/.github && rm -rf ./revanced-patches/.ideas
+        
       - name: compress
         run: cd revanced-patches && 7z a ../rp.7z *
         
@@ -48,8 +51,8 @@ jobs:
       - name: list filestructure
         run: ls -la
         
-      - name: fetch local repo
-        run: git fetch actionsMergingTry0
+      - name: pull local repo
+        run: git pull
       
       - name: Commit merges
         run: |
