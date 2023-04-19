@@ -29,6 +29,9 @@ jobs:
 
       - name: Installing Dependencies
         run: sudo apt-get install -y git && sudo apt-get install -y p7zip-full
+        
+      - name: fresh start - remove all old files
+        run: rm -rf $(find . -name "*" ! -name ".github")
 
       - name: ls -la
         run: ls -la
