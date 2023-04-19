@@ -18,6 +18,8 @@ jobs:
       deployments: write
       checks: write
       security-events: write
+      pages: write
+      issues: write
       
 
     steps:
