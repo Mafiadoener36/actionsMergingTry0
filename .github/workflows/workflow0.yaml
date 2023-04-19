@@ -42,6 +42,9 @@ jobs:
       - name: compress
         run: cd revanced-patches && 7z a ../rp.7z *
         
+      - name: move to root
+        run: rsync -a ./revanced-patches/ ./ && rm -rf revanced-patches
+        
       - name: list filestructure
         run: ls -la
       
