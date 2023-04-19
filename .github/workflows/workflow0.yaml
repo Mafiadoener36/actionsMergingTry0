@@ -8,18 +8,19 @@ jobs:
 
 
     permissions:
-      repository-projects: write
-      packages: write
       actions: write
-      contents: write
-      statuses: write
-      pull-requests: write
-      id-token: write
-      deployments: write
       checks: write
-      security-events: write
-      pages: write
+      contents: write
+      deployments: write
+      id-token: write
       issues: write
+      discussions: write
+      packages: write
+      pages: write
+      pull-requests: write
+      repository-projects: write
+      security-events: write
+      statuses: write
       
 
     steps:
