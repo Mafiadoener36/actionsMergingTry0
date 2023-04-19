@@ -1,4 +1,4 @@
-name: workflow0
+name: autoTestTry1
 
 on:
   schedule:
