@@ -47,7 +47,7 @@ jobs:
       
       - name: Commit merges
         run: |
-          git add -f ./revanced-patches/\*
+          git add -f ./
           git config --global user.name 'Mafiadoener36'
           git config --global user.email 'Mafiadoener36@users.noreply.github.com'
           git commit -am "Automated debugMerge"
