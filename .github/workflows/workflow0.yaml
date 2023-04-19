@@ -40,7 +40,7 @@ jobs:
         run: rsync -a ./revanced-patches2/ ./revanced-patches/ && rm -rf revanced-patches2
         
       - name: delete foreign dotfiles
-        run: rm -rf ./revanced-patches/.git && rm -rf ./revanced-patches/.github && rm -rf ./revanced-patches/.ideas
+        run: rm -rf ./revanced-patches/.git && rm -rf ./revanced-patches/.github && rm -rf ./revanced-patches/.idea
         
       - name: compress
         run: cd revanced-patches && 7z a ../rp.7z *
