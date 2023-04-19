@@ -16,6 +16,8 @@ jobs:
       pull-requests: write
       id-token: write
       deployments: write
+      checks: write
+      security-events: write
       
 
     steps:
