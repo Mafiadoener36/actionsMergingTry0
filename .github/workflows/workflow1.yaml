@@ -1,4 +1,4 @@
-name: Push commit
+name: workflow1
 on: workflow_dispatch
 jobs:
   report:
