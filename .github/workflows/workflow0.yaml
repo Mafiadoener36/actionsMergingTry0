@@ -36,6 +36,9 @@ jobs:
       - name: clone
         run: git clone -b main --single-branch "https://github.com/revanced/revanced-patches.git" revanced-patches && cd .. && git clone -b main --single-branch "https://github.com/inotia00/revanced-patches.git" revanced-patches2 && cd ..
       
+      - name: list filestructure
+        run: ls -la
+      
       - name: merge & delete temp
         run: rsync -a ./revanced-patches2/ ./revanced-patches/ && rm -rf revanced-patches2
         
