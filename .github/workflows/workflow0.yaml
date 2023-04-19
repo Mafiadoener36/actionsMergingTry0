@@ -47,6 +47,9 @@ jobs:
         
       - name: list filestructure
         run: ls -la
+        
+      - name: fetch local repo
+        run: git fetch actionsMergingTry0
       
       - name: Commit merges
         run: |
