@@ -28,13 +28,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Installing Dependencies
-        run: sudo apt-get install -y git
+        run: sudo apt-get install -y git && sudo apt-get install -y p7zip-full
 
       - name: ls -la
         run: ls -la
 
       - name: merge
-        run: git clone -b main --single-branch "https://github.com/revanced/revanced-patches.git" revanced-patches && git clone -b main --single-branch "https://github.com/inotia00/revanced-patches.git" revanced-patches2 && mv -f ./revanced-patches2 ./revanced-patches
+        run: git clone -b main --single-branch "https://github.com/revanced/revanced-patches.git" revanced-patches && git clone -b main --single-branch "https://github.com/inotia00/revanced-patches.git" revanced-patches2 && mv -f ./revanced-patches2 ./revanced-patches && 7z a ./revanced-patches rp.7z && rm -f revanced-patches && rm -f revanced-patches2
       
       - name: ls -la
         run: ls -la
