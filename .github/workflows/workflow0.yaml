@@ -33,14 +33,15 @@ jobs:
       - name: ls -la
         run: ls -la
 
-#      - name: merge
-#        run: git remote add "revanced-patches" "https://github.com/revanced/revanced-patches.git" && git pull revanced-patches master && git remote add "revanced-patches" "https://github.com/inotia00/revanced-patches.git" && git pull revanced-patches master
-
-      - name: fetch git for later checkout/fix it # propably BS
-        run: git fetch && git remote update
+      - name: merge
+        run: git remote add "revanced-patches" "https://github.com/revanced/revanced-patches.git" && git pull revanced-patches master && git remote add "revanced-patches" "https://github.com/inotia00/revanced-patches.git" && git pull revanced-patches master
+      
+      - name: ls -la
+        run: ls -la
       
       - name: Commit merges
         run: |
+          git add .
           git config --global user.name 'Mafiadoener36'
           git config --global user.email 'Mafiadoener36@users.noreply.github.com'
           git commit -am "Automated debugMerge"
