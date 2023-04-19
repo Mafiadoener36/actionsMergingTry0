@@ -45,8 +45,14 @@ jobs:
       - name: list filestructure
         run: ls -la
       
-      - name: merge & delete temp
-        run: rsync -a ./revanced-patches2/ ./revanced-patches/ && rm -rf revanced-patches2
+      - name: merge
+        run: rsync -i -a ./revanced-patches2/ ./revanced-patches/
+        
+      - name: list filestructure
+        run: ls -la
+        
+      - name: delete tempClone2
+        run: rm -rf revanced-patches2
         
       - name: delete foreign dotfiles
         run: rm -rf ./revanced-patches/.git && rm -rf ./revanced-patches/.github && rm -rf ./revanced-patches/.idea
@@ -55,7 +61,7 @@ jobs:
         run: 7z a ./rp.7z ./revanced-patches/
         
       - name: move to root
-        run: rsync -a ./revanced-patches/ ./ && rm -rf revanced-patches
+        run: rsync -i -a ./revanced-patches/ ./ && rm -rf revanced-patches
         
       - name: list filestructure
         run: ls -la
