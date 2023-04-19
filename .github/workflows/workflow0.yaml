@@ -31,7 +31,7 @@ jobs:
         run: sudo apt-get install -y git && sudo apt-get install -y p7zip-full
         
       - name: fresh start - remove all old files
-        run: rm -rf $(find . -name "*" ! -name ".github")
+        run: find . -maxdepth 1 -type f ! -name ".github" -exec rm {} \;
 
       - name: ls -la
         run: ls -la
