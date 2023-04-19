@@ -9,6 +9,7 @@ jobs:
         run: date +%s > report.txt
       - name: Commit report
         run: |
+          git add report.txt
           git config --global user.name 'Mafiadoener36'
           git config --global user.email 'Mafiadoener36@users.noreply.github.com'
           git commit -am "Automated report"
