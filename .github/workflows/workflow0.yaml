@@ -9,7 +9,12 @@ jobs:
 
     permissions:
       repository-projects: write
-
+      packages: write
+      actions: write
+      contents: write
+      statuses: write
+      pull-requests: write
+      
 
     steps:
       - name: Checkout the code/initialize repo for use
